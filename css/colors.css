@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #ff5252;
+  --color-primary-hover: #cf3232;
+  --color-shadow: #40555555;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-hover) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: white !important;
+}

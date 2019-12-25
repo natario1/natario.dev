@@ -1,0 +1,36 @@
+@import "fonts.css";
+@import "colors.css";
+
+.title {
+  text-shadow: 3px 3px var(--color-shadow);
+}
+
+.subtitle {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-container {
+  cursor: pointer;
+}
+
+.link-container img {
+  border-radius: 16px;
+  filter: brightness(70%);
+  width: 100%;
+  /* To support a max-height, we must add the object- params */
+  max-height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.link-container div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px var(--color-shadow);
+}

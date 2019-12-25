@@ -1,9 +1,206 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>natario1</title>
+      <title>@natario1</title>
+
+      <!-- Boilerplate -->
+      <meta charset="utf-8">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="canonical" href="https://natario1.github.io/" />
+      <meta name="author" content="Mattia Iavarone" />
+      <meta name="description" content="My personal website as a professional Android developer, showcasing my skills and popular projects.">
+
+      <!-- Colors -->
+      <meta name="theme-color" content="#353940">
+      <meta name="msapplication-navbutton-color" content="#353940">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+      <!-- Og tags -->
+      <meta property="og:title" content="natario1" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:description" content="My personal website as a professional Android developer, showcasing my skills and popular projects." />
+      <meta property="og:url" content="https://natario1.github.io/" />
+      <meta property="og:site_name" content="@natario1" />
+
+      <!-- Jekyll's SEO plugin adds these -->
+      <script type="application/ld+json">{
+        "@type":"WebSite",
+        "url":"https://natario1.github.io/",
+        "headline":"natario1",
+        "name":"natario1",
+        "author":{"@type":"Person","name":"Mattia Iavarone"},
+        "description":"My personal website as a professional Android developer, showcasing my skills and popular projects.",
+        "@context":"https://schema.org"
+      }</script>
+
+      <!-- Styles -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/fonts_responsive.css">
     </head>
     <body>
-        Hello  World!
+      <div class="container px-5 pb-5">
+        <h1 class="title display-2 font-weight-bold text-center mt-5">Mattia Iavarone</h1>
+        <div class="subtitle text-center mt-4">
+          <p>
+            I am a 28-years old professional developer specialized in mobile applications and tools.
+            I have been working as an Android engineer for many years, during which I have developed
+            recognition in my field, especially within the Open Source community.
+          </p>
+          <p>
+            The tools I develop are used by tens of millions of end users every day.
+            I am the author and maintainer of several popular projects in the Android community,
+            most notably the <a href="https://natario1.github.io/CameraView">CameraView</a> library.
+            My experience and interests span many areas of development - from functional UI/UX to
+            low-level graphics, device hardware and media.
+          </p>
+          <p>
+            This website is meant to showcase some of my work. If you or your company need support,
+            consulting, training, PoCs or help in the development of new features, feel free to
+            <a href="#contact">get in touch</a>!
+          </p>
+        </div>
+        <div class="text-center">
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#camera">Camera</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#media">Audio & Video</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#opengl">OpenGL</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#ui">UI Components</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#apps">Apps</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="https://github.com/natario1">GitHub</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#contact">Get in touch</a>
+        </div>
+
+        <!-- camera -->
+        <div class="skill-container text-justify" id="camera">
+          <h1 class="mt-5">Camera</h1>
+          <p class="mt-4">
+            Dealing with mobile devices hardware is not easy, and the camera sensor is one of the most frustrating tasks.
+            This is because of its intrinsic complexity, but also because of the uncomfortable design of the Android SDK APIs and
+            the manufacturer-specific differences between sensors and the devices they belong to.
+          </p>
+          <p>
+            My project, named <a href="https://natario1.github.io/CameraView">CameraView</a>, was born out of this frustration
+            and has received growing interest over the years, until becoming one of the most popular camera interfaces
+            among Android developers. Besides being able to communicate correctly with the camera sensor, the library also
+            includes support for business-critical features like real-time OpenGL ES filters, watermarks, overlays and
+            efficient real-time processing.
+          </p>
+          <p>
+            This tool powers hundreds - if not thousands - of live applications and has recently received support and trust
+            by India's giant <a href="https://sharechat.com/">ShareChat</a>, a social mobile app with over 100 million downloads,
+            in which CameraView does a critical job.
+          </p>
+          <h5>Links</h5>
+          <div class="row mt-4">
+            <a class="link-container col-12" href="https://natario1.github.io/CameraView">
+              <img class="img-fluid shadow-sm" src="static/banner_cameraview.png"/>
+              <div><h1>CameraView</h1></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- media -->
+        <div class="skill-container text-justify" id="media">
+          <h1 class="mt-5">Audio & Video</h1>
+          <p class="mt-4">
+            Processing media files is a heavyweight task. Whether it's video processing,
+            cropping, transcoding, trimming or applying filters - whenever performance is involved,
+            it is of utmost importance to perform these tasks in a hardware-accelerated fashion
+            to complete them in a reasonable amount of time.
+          </p>
+          <p>
+            On Android devices, this goal is achieved by working with MediaCodec APIs and managing
+            the raw buffers of data, using OpenGL ES for processing video frames, if needed.
+            I am the author and maintainer of Open Source utilities to help in the process.
+            My <a href="https://natario1.github.io/Transcoder">Transcoder</a> library, for instance,
+            is capable of decoding video files and reassembling them together with many advanced options.
+            It can also be tweaked to support video filters or audio processing effects.
+          </p>
+          <p>
+            Just like <a href="#camera">CameraView</a>, this tool has received enterprise support
+            and is currently used within <a href="https://sharechat.com/">ShareChat</a>,
+            a social mobile app with 10 million daily active users. Recently, I have also applied
+            the same principles to GIF files and released
+            <a href="https://natario1.github.io/GIFCompressor">GIFCompressor</a>, a hardware-accelerated
+            GIF-to-MP4 converter.
+          </p>
+          <h5>Links</h5>
+          <div class="row mt-4">
+            <a class="link-container col-12 col-md-6" href="https://natario1.github.io/Transcoder">
+              <img class="img-fluid shadow-sm" src="static/banner_transcoder.png"/>
+              <div><h1>Transcoder</h1></div>
+            </a>
+            <a class="link-container col-12 col-md-6 mt-3 mt-md-0" href="https://natario1.github.io/GIFCompressor">
+              <img class="img-fluid shadow-sm" src="static/banner_gifcompressor.png"/>
+              <div><h1>GIFCompressor</h1></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- OpenGL -->
+        <div class="skill-container text-justify" id="opengl">
+          <h1 class="mt-5">OpenGL</h1>
+          <p class="mt-4">
+            Both my <a href="#camera">camera</a> and <a href="#media">media processing</a> works have led me to
+            improve my EGL and OpenGL ES skills, which are fundamental for managing the camera preview, processing
+            camera frames, editing videos and applying real-time effects.
+          </p>
+          <p>
+            I am far from being an OpenGL expert, but I know how to use it for the above mentioned tasks
+            and this can greatly improve the performance of the application with respect to other solutions.
+            It also gives great flexibility that can be used creatively. Out of this interest, I have
+            developed <a href="https://natario1.github.io/Egloo">Egloo</a> - a Kotlin wrapper around GLES APIs
+            that helps in managing the EGL context and performing simple drawing operations, by using
+            object-oriented components that are familiar to every Android developer.
+          </p>
+          <p>
+            Egloo is still in development but the overall goal is to make simple tasks <em>simpler</em>
+            from the perspective of an Android developer, thus reducing the very steep learning curve of OpenGL.
+            This tool powers all of the libraries that were mentioned above, so it is used by millions of end users as well.
+          </p>
+          <h5>Links</h5>
+          <div class="row mt-4">
+            <a class="link-container col-12" href="https://natario1.github.io/Egloo">
+              <img class="img-fluid shadow-sm" src="static/banner_egloo.png"/>
+              <div><h1>Egloo</h1></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- UI Components -->
+        <div class="skill-container text-justify" id="ui">
+          <h1 class="mt-5">UI Components</h1>
+          <p class="mt-4">
+            Work in progress.
+          </p>
+        </div>
+
+        <!-- Apps -->
+        <div class="skill-container text-justify" id="apps">
+          <h1 class="mt-5">Apps</h1>
+          <p class="mt-4">
+            Work in progress.
+          </p>
+        </div>
+
+        <!-- get in touch -->
+        <div class="skill-container text-justify" id="contact">
+          <h1 class="mt-5">Get in touch</h1>
+          <p class="mt-4">Feel free to get in touch with me to talk about your product. I can help with:</p>
+          <ul>
+            <li>Providing support about the tools I created</li>
+            <li>Creating new proprietary features on top of them</li>
+            <li>Creating Proof-of-Concepts for apps or new features</li>
+            <li>General consulting within my fields of expertise</li>
+            <li>Leading and training your team through the development of a feature</li>
+            <li>Reviewing the state of your product / app / SDK</li>
+            <li>Designing the technology stack of small and big applications</li>
+          </ul>
+          <p>Send me an <a href="mailto:mat.iavarone@gmail.com">e-mail</a>!</p>
+        </div>
+      </div>
     </body>
 </html>
