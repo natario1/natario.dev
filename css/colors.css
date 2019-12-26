@@ -1,11 +1,25 @@
 :root {
   --color-primary: #ff5252;
   --color-primary-hover: #cf3232;
-  --color-shadow: #40555555;
+  --color-shadow: #40853030;
+  --color-background: #FFFFFF;
+  --color-code: #000000;
+  --color-code-background: #F0F0F0;
+}
+
+body {
+  background-color: var(--color-background);
 }
 
 a {
   color: var(--color-primary);
+}
+
+code {
+  color: var(--color-code);
+  background-color: var(--color-code-background);
+  font-size: 0.8em;
+  padding: 0.3em;
 }
 
 a:hover {

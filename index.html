@@ -13,8 +13,8 @@
       <meta name="description" content="My personal website as a professional Android developer, showcasing my skills and popular projects.">
 
       <!-- Colors -->
-      <meta name="theme-color" content="#353940">
-      <meta name="msapplication-navbutton-color" content="#353940">
+      <meta name="theme-color" content="#ff5252">
+      <meta name="msapplication-navbutton-color" content="#ff5252">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -112,7 +112,7 @@
             to complete them in a reasonable amount of time.
           </p>
           <p>
-            On Android devices, this goal is achieved by working with MediaCodec APIs and managing
+            On Android devices, this goal is achieved by working with <code>MediaCodec</code> APIs and managing
             the raw buffers of data, using OpenGL ES for processing video frames, if needed.
             I am the author and maintainer of Open Source utilities to help in the process.
             My <a href="https://natario1.github.io/Transcoder">Transcoder</a> library, for instance,
@@ -174,23 +174,63 @@
         <div class="skill-container text-justify" id="ui">
           <h1 class="mt-5">UI Components</h1>
           <p class="mt-4">
-            Work in progress.
+            UI and UX design is a fascinating field that I have been interested in since the beginning
+            of my career. I have experience in building UI components that are both beautiful and functional,
+            and I enjoy the process of designing and refining them to provide the right experience to the end user.
           </p>
+          <p>
+            In Android, this often boils down to being comfortable with the <code>View</code> system and the Android SDK internals,
+            including meaningful animations, responsiveness to touch events, optimizing the measuring and drawing pipeline
+            of each component.
+          </p>
+          <p>
+            <a href="https://natario1.github.io/ZoomLayout">ZoomLayout</a> and <a href="https://github.com/natario1/Elements">Elements</a>
+            are just a few Open Source examples of my work in this area. The former is a flexible abstraction around touch event streams that provides
+            two-dimensional zoom and pan behavior into all kinds of custom views (like <code>ViewGroup</code>, <code>ImageView</code>, or <code>Surface</code> streams).
+            The latter is a collection of reusable, coordinated, modular components for <code>RecyclerView</code>. Both are written in Kotlin.
+          </p>
+          <h5>Links</h5>
+          <div class="row mt-4">
+            <a class="link-container col-12 col-md-6" href="https://natario1.github.io/ZoomLayout">
+              <img class="img-fluid shadow-sm" src="static/banner_zoomlayout.png"/>
+              <div><h1>ZoomLayout</h1></div>
+            </a>
+            <a class="link-container col-12 col-md-6 mt-3 mt-md-0" href="https://natario1.github.io/Elements">
+              <img class="img-fluid shadow-sm" src="static/banner_gifcompressor.png" style="filter:brightness(0%)"/>
+              <div><h1>Elements</h1></div>
+            </a>
+          </div>
         </div>
 
         <!-- Apps -->
         <div class="skill-container text-justify" id="apps">
           <h1 class="mt-5">Apps</h1>
           <p class="mt-4">
-            Work in progress.
+            I have worked at front-end products for many years, both for commercial apps and personal projects.
+            I have a taste for UI/UX and graphic design and write clean, testable and reusable code.
+            I am familiar with the whole process of building an application, from the Proof-of-Concept stage to
+            development, scaling, testing and deploying to the app store.
           </p>
+          <p>
+            The <a href="https://picme.chat">PicMe</a> application, currently in early beta stage, is a good example of my
+            front-end work on the UI, UX, graphical and engineering side. It is a personal project that I push forward
+            in my free time and I am the only person behind its website, graphics, concept, and well-tested Kotlin codebase.
+
+          </p>
+          <h5>Links</h5>
+          <div class="row mt-4">
+            <a class="link-container col-12" href="https://picme.chat">
+              <img class="img-fluid shadow-sm" src="static/banner_picme.png"/>
+              <div><h1>picme</h1></div>
+            </a>
+          </div>
         </div>
 
         <!-- get in touch -->
         <div class="skill-container text-justify" id="contact">
           <h1 class="mt-5">Get in touch</h1>
           <p class="mt-4">Feel free to get in touch with me to talk about your product. I can help with:</p>
-          <ul>
+          <ul class="px-3">
             <li>Providing support about the tools I created</li>
             <li>Creating new proprietary features on top of them</li>
             <li>Creating Proof-of-Concepts for apps or new features</li>
