@@ -1,5 +1,6 @@
 :root {
   --color-primary: #ff5252;
+  --color-primary-active: #e04242;
   --color-primary-hover: #cf3232;
   --color-shadow: #40853030;
   --color-background: #FFFFFF;
@@ -32,8 +33,28 @@ a:hover {
     color: white !important;
 }
 
+.btn-primary.active {
+  background-color: var(--color-primary-active) !important;
+  border-color: var(--color-primary-active) !important;
+}
+
 .btn-primary:hover {
   background-color: var(--color-primary-hover) !important;
   border-color: var(--color-primary-hover) !important;
+  color: white !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--color-primary) !important;
+}
+
+.btn-outline-primary.active {
+  background-color: var(--color-primary-active) !important;
+  border-color: var(--color-primary-active) !important;
+}
+
+.btn-outline-primary:hover {
+  border-color: var(--color-primary-hover) !important;
+  background-color: var(--color-primary-hover) !important;
   color: white !important;
 }
