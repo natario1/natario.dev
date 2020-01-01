@@ -33,7 +33,7 @@ a:hover {
     color: white !important;
 }
 
-.btn-primary.active {
+.btn-primary.active, .btn-primary:active {
   background-color: var(--color-primary-active) !important;
   border-color: var(--color-primary-active) !important;
 }
@@ -48,7 +48,7 @@ a:hover {
     border-color: var(--color-primary) !important;
 }
 
-.btn-outline-primary.active {
+.btn-outline-primary.active, .btn-outline-primary:active  {
   background-color: var(--color-primary-active) !important;
   border-color: var(--color-primary-active) !important;
 }

@@ -1,8 +1,8 @@
 @import "fonts.css";
 @import "colors.css";
 
-/* direct h1 children of divs that have an id */
-div[id] > h1::before {
+/* direct h1 children of skill containers */
+.skill-container > h1::before {
   content: '#';
   color: var(--color-primary);
   font-size: 0.5em;
@@ -15,15 +15,11 @@ div[id] > h1::before {
   margin-left: calc(-16px - 0.65em);
 }
 
-div[id] > h1:hover::after {
+.skill-container > h1:hover::after {
   color: var(--color-primary-hover);
 }
 
-.title {
-  /* text-shadow: 3px 3px var(--color-shadow); */
-}
-
-.subtitle {
+#subtitle {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -63,7 +59,7 @@ div[id] > h1:hover::after {
   right: 16px;
 }
 
-#languages > a {
+#languages > .btn {
   /* font-family: 'Roboto', sans-serif !important; */
   /* font-style: normal !important; */
   /* font-weight: 700 !important; */
@@ -71,12 +67,12 @@ div[id] > h1:hover::after {
   line-height: 1;
 }
 
-#languages>a:first-child {
+#languages > .btn:first-child {
   border-bottom-left-radius: 50rem;
   border-top-left-radius: 50rem;
 }
 
-#languages>a:last-child {
+#languages > .btn:last-child {
   border-bottom-right-radius: 50rem;
   border-top-right-radius: 50rem;
 }

@@ -1,0 +1,66 @@
+{
+  "skills": {
+    "camera": {
+      "name": "Camera",
+      "href": "#camera",
+      "description": [
+        "WWWWWWWWWW"
+      ]
+    },
+    "media": {
+      "name": "Audio & Video",
+      "href": "#media",
+      "description": [
+        "WWWWWW"
+      ]
+    },
+    "opengl": {
+      "name": "OpenGL",
+      "href": "#opengl",
+      "description": [
+        "XXXXXX"
+      ]
+    },
+    "ui": {
+      "name": "UI Components",
+      "href": "#ui",
+      "description": [
+        "JJJJJJJ."
+      ]
+    },
+    "apps": {
+      "name": "Apps",
+      "href": "#apps",
+      "description": [
+        "SSSSS."
+      ]
+    }
+  },
+  "extras": {
+    "github": {
+      "name": "GitHub",
+      "href": "https://github.com/natario1"
+    },
+    "contact": {
+      "name": "Get in touch",
+      "href": "#contact",
+      "services_header": "Feel free to get in touch with me to talk about your product. I can help with:",
+      "services_footer": "Send me an <a href=\"mailto:mat.iavarone@gmail.com\">e-mail</a>!",
+      "services": [
+        "providing support about the tools I created,",
+        "creating new proprietary features on top of them,",
+        "creating Proof-of-Concepts for apps or new features,",
+        "general consulting within my fields of expertise,",
+        "leading and training your team through the development of a feature,",
+        "reviewing the state of your product / app / SDK,",
+        "designing the technology stack of small and big applications."
+      ]
+    }
+  },
+  "common": {
+    "links": "Links",
+    "subtitle": [
+      "WOOOOO"
+    ]
+  }
+}

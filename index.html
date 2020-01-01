@@ -58,65 +58,38 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/fonts_responsive.css">
+
+      <!-- Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
+      <script src="js/main.js" defer></script>
     </head>
+
     <body>
-      <div class="container px-5 pb-5">
-        <header id="languages" class="btn-group" style="display: none">
-          <a class="btn btn-sm btn-primary active" href=".">en</a>
-          <a class="btn btn-sm btn-primary">it</a>
-          <a class="btn btn-sm btn-primary">pt</a>
+      <div id="container" class="container px-5 pb-5" v-if="strings">
+        <header id="languages" class="btn-group btn-group-toggle">
+          <label v-for="lang in languages" class="btn btn-sm btn-primary" v-bind:class="{ active: language == lang }">
+            <input type="radio" v-bind:value="lang" v-model="language">{{ lang }}
+          </label>
         </header>
-        <h1 class="title display-2 font-weight-bold text-center mt-5">Mattia Iavarone</h1>
-        <div class="subtitle text-center mt-4">
-          <p>
-            I am a 28-years old professional developer specialized in mobile applications and tools.
-            I have been working as an Android engineer for many years, during which I have developed
-            recognition in my field, especially within the Open Source community.
-          </p>
-          <p>
-            The tools I develop are used by tens of millions of end users every day.
-            I am the author and maintainer of several popular projects in the Android community,
-            most notably the <a href="https://natario1.github.io/CameraView">CameraView</a> library.
-            My experience and interests span many areas of development — from functional UI/UX to
-            low-level graphics, device hardware and media.
-          </p>
-          <p>
-            This website is meant to showcase some of my work. If you or your company need support,
-            consulting, training, PoCs or help in the development of new features, feel free to
-            <a href="#contact">get in touch</a>!
-          </p>
+        <h1 id="title" class="display-2 font-weight-bold text-center mt-5">Mattia Iavarone</h1>
+        <div id="subtitle" class="text-center mt-4">
+          <!-- Use v-html to respect inner tags -->
+          <p v-for="paragraph in strings.common.subtitle" v-html="paragraph"></p>
         </div>
-        <div class="text-center">
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#camera">Camera</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#media">Audio & Video</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#opengl">OpenGL</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#ui">UI Components</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#apps">Apps</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="https://github.com/natario1">GitHub</a>
-          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2" href="#contact">Get in touch</a>
+        <div class="text-center" id="skill-list">
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2"
+             v-for="skill in strings.skills"
+             v-bind:href="skill.href">{{ skill.name }}</a>
+          <a class="btn btn-primary btn-lg rounded-pill mx-1 mt-2"
+             v-for="extra in strings.extras"
+             v-bind:href="extra.href">{{ extra.name }}</a>
         </div>
 
         <!-- camera -->
         <div class="skill-container text-justify" id="camera">
-          <h1 class="mt-5" onclick="window.location.href = '#camera'">Camera</h1>
-          <p class="mt-4">
-            Dealing with mobile devices hardware is not easy, and the camera sensor is one of the most frustrating tasks.
-            This is because of its intrinsic complexity, but also because of the uncomfortable design of the Android SDK APIs and
-            the manufacturer-specific differences between sensors and the devices they belong to.
-          </p>
-          <p>
-            My project, named <a href="https://natario1.github.io/CameraView">CameraView</a>, was born out of this frustration
-            and has received growing interest over the years, until becoming one of the most popular camera interfaces
-            among Android developers. Besides being able to communicate correctly with the camera sensor, the library also
-            includes support for business-critical features like real-time OpenGL ES filters, watermarks, overlays and
-            efficient real-time processing.
-          </p>
-          <p>
-            This tool powers hundreds — if not thousands — of live applications and has recently received support and trust
-            by India's giant <a href="https://sharechat.com/">ShareChat</a>, a social mobile app with over 100 million downloads,
-            in which CameraView does a critical job.
-          </p>
-          <h5>Links</h5>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#camera'">{{ strings.skills.camera.name }}</h1>
+          <p v-for="paragraph in strings.skills.camera.description" v-html="paragraph"></p>
+          <h5>{{ strings.common.links }}</h5>
           <div class="row mt-4">
             <a class="link-container col-12" href="https://natario1.github.io/CameraView">
               <img class="img-fluid shadow-sm" src="static/banner_cameraview.jpg" alt="CameraView"/>
@@ -127,30 +100,9 @@
 
         <!-- media -->
         <div class="skill-container text-justify" id="media">
-          <h1 class="mt-5" onclick="window.location.href = '#media'">Audio & Video</h1>
-          <p class="mt-4">
-            Processing media files is a heavyweight task. Whether it's video processing,
-            cropping, transcoding, trimming or applying filters — whenever performance is involved,
-            it is of utmost importance to perform these tasks in a hardware-accelerated fashion
-            to complete them in a reasonable amount of time.
-          </p>
-          <p>
-            On Android devices, this goal is achieved by working with <code>MediaCodec</code> APIs and managing
-            the raw buffers of data, using OpenGL ES for processing video frames, if needed.
-            I am the author and maintainer of Open Source utilities to help in the process.
-            My <a href="https://natario1.github.io/Transcoder">Transcoder</a> library, for instance,
-            is capable of decoding video files and reassembling them together with many advanced options.
-            It can also be tweaked to support video filters or audio processing effects.
-          </p>
-          <p>
-            Just like <a href="#camera">CameraView</a>, this tool has received enterprise support
-            and is currently used within <a href="https://sharechat.com/">ShareChat</a>,
-            a social mobile app with 10 million daily active users. Recently, I have also applied
-            the same principles to GIF files and released
-            <a href="https://natario1.github.io/GIFCompressor">GIFCompressor</a>, a hardware-accelerated
-            GIF-to-MP4 converter.
-          </p>
-          <h5>Links</h5>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#media'">{{ strings.skills.media.name }}</h1>
+          <p v-for="paragraph in strings.skills.media.description" v-html="paragraph"></p>
+          <h5>{{ strings.common.links }}</h5>
           <div class="row mt-4">
             <a class="link-container col-12 col-md-6" href="https://natario1.github.io/Transcoder">
               <img class="img-fluid shadow-sm" src="static/banner_transcoder.jpg" alt="Transcoder"/>
@@ -165,26 +117,9 @@
 
         <!-- OpenGL -->
         <div class="skill-container text-justify" id="opengl">
-          <h1 class="mt-5" onclick="window.location.href = '#opengl'">OpenGL</h1>
-          <p class="mt-4">
-            Both my <a href="#camera">camera</a> and <a href="#media">media processing</a> works have led me to
-            improve my EGL and OpenGL ES skills, which are fundamental for managing the camera preview, processing
-            camera frames, editing videos and applying real-time effects.
-          </p>
-          <p>
-            I am far from being an OpenGL expert, but I know how to use it for the above mentioned tasks
-            and this can greatly improve the performance of the application with respect to other solutions.
-            It also gives great flexibility that can be used creatively. Out of this interest, I have
-            developed <a href="https://natario1.github.io/Egloo">Egloo</a> — a Kotlin wrapper around GLES APIs
-            that helps in managing the EGL context and performing simple drawing operations, by using
-            object-oriented components that are familiar to every Android developer.
-          </p>
-          <p>
-            Egloo is still in development but the overall goal is to make simple tasks <em>simpler</em>
-            from the perspective of an Android developer, thus reducing the very steep learning curve of OpenGL.
-            This tool powers all of the libraries that were mentioned above, so it is used by millions of end users as well.
-          </p>
-          <h5>Links</h5>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#opengl'">{{ strings.skills.opengl.name }}</h1>
+          <p v-for="paragraph in strings.skills.opengl.description" v-html="paragraph"></p>
+          <h5>{{ strings.common.links }}</h5>
           <div class="row mt-4">
             <a class="link-container col-12" href="https://natario1.github.io/Egloo">
               <img class="img-fluid shadow-sm" src="static/banner_egloo.jpg" alt="Egloo"/>
@@ -195,24 +130,9 @@
 
         <!-- UI Components -->
         <div class="skill-container text-justify" id="ui">
-          <h1 class="mt-5" onclick="window.location.href = '#ui'">UI Components</h1>
-          <p class="mt-4">
-            UI and UX design is a fascinating field that I have been interested in since the beginning
-            of my career. I have experience in building UI components that are both beautiful and functional,
-            and I enjoy the process of designing and refining them to provide the right experience to the end user.
-          </p>
-          <p>
-            In Android, this often boils down to being comfortable with the <code>View</code> system and the Android SDK internals,
-            including meaningful animations, responsiveness to touch events, optimizing the measuring and drawing pipeline
-            of each component.
-          </p>
-          <p>
-            <a href="https://natario1.github.io/ZoomLayout">ZoomLayout</a> and <a href="https://github.com/natario1/Elements">Elements</a>
-            are just a few Open Source examples of my work in this area. The former is a flexible abstraction around touch event streams that provides
-            two-dimensional zoom and pan behavior into all kinds of custom views (like <code>ViewGroup</code>, <code>ImageView</code>, or <code>Surface</code> streams).
-            The latter is a collection of reusable, coordinated, modular components for <code>RecyclerView</code>. Both are written in Kotlin.
-          </p>
-          <h5>Links</h5>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#ui'">{{ strings.skills.ui.name }}</h1>
+          <p v-for="paragraph in strings.skills.ui.description" v-html="paragraph"></p>
+          <h5>{{ strings.common.links }}</h5>
           <div class="row mt-4">
             <a class="link-container col-12 col-md-6" href="https://natario1.github.io/ZoomLayout">
               <img class="img-fluid shadow-sm" src="static/banner_zoomlayout.jpg" alt="ZoomLayout"/>
@@ -227,20 +147,9 @@
 
         <!-- Apps -->
         <div class="skill-container text-justify" id="apps">
-          <h1 class="mt-5" onclick="window.location.href = '#apps'">Apps</h1>
-          <p class="mt-4">
-            I have worked at front-end products for many years, both for commercial apps and personal projects.
-            I have a taste for UI/UX and graphic design and write clean, testable and reusable code.
-            I am familiar with the whole process of building an application, from the Proof-of-Concept stage to
-            development, scaling, testing and deploying to the app store.
-          </p>
-          <p>
-            The <a href="https://picme.chat">PicMe</a> application, currently in early beta stage, is a good example of my
-            front-end work on the UI, UX, graphical and engineering side. It is a personal project that I push forward
-            in my free time and I am the only person behind its website, graphics, concept, and well-tested Kotlin codebase.
-
-          </p>
-          <h5>Links</h5>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#apps'">{{ strings.skills.apps.name }}</h1>
+          <p v-for="paragraph in strings.skills.apps.description" v-html="paragraph"></p>
+          <h5>{{ strings.common.links }}</h5>
           <div class="row mt-4">
             <a class="link-container col-12" href="https://picme.chat">
               <img class="img-fluid shadow-sm" src="static/banner_picme.jpg" alt="PicMe"/>
@@ -251,18 +160,12 @@
 
         <!-- get in touch -->
         <div class="skill-container text-justify" id="contact">
-          <h1 class="mt-5" onclick="window.location.href = '#contact'">Get in touch</h1>
-          <p class="mt-4">Feel free to get in touch with me to talk about your product. I can help with:</p>
+          <h1 class="mt-5 mb-4" onclick="window.location.href = '#contact'">{{ strings.extras.contact.name }}</h1>
+          <p v-html="strings.extras.contact.services_header"></p>
           <ul class="pl-3">
-            <li>providing support about the tools I created,</li>
-            <li>creating new proprietary features on top of them,</li>
-            <li>creating Proof-of-Concepts for apps or new features,</li>
-            <li>general consulting within my fields of expertise,</li>
-            <li>leading and training your team through the development of a feature,</li>
-            <li>reviewing the state of your product / app / SDK,</li>
-            <li>designing the technology stack of small and big applications.</li>
+            <li v-for="service in strings.extras.contact.services" v-html="service"></li>
           </ul>
-          <p>Send me an <a href="mailto:mat.iavarone@gmail.com">e-mail</a>!</p>
+          <p v-html="strings.extras.contact.services_footer"></p>
         </div>
       </div>
     </body>
