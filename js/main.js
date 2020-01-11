@@ -19,7 +19,7 @@ const app = new Vue({
         /* Set to undefined so we can use v-if in container and avoid rendering without strings */
         strings: undefined,
         language: undefined,
-        languages: [ 'en', 'it', 'pt' ]
+        languages: [ 'en', 'pt']
     },
     watch: {
         language: async function(value) {

@@ -4,9 +4,9 @@
       "name": "Camera",
       "href": "#camera",
       "description": [
-        "Dealing with mobile devices hardware is not easy, and the camera sensor is one of the most frustrating tasks. This is because of its intrinsic complexity, but also because of the uncomfortable design of the Android SDK APIs and the manufacturer-specific differences between sensors and the devices they belong to.",
+        "Dealing with mobile devices hardware is not easy, and the camera sensor is one of the most frustrating tasks. This is because of its intrinsic complexity, but also because of the uncomfortable design of the Android SDK APIs and the manufacturer-specific differences, among both sensors and the devices they belong to.",
         "My project, named <a href=\"https://natario1.github.io/CameraView\">CameraView</a>, was born out of this frustration and has received growing interest over the years, until becoming one of the most popular camera interfaces among Android developers. Besides being able to communicate correctly with the camera sensor, the library also includes support for business-critical features like real-time OpenGL ES filters, watermarks, overlays and efficient real-time processing.",
-        "This tool powers hundreds — if not thousands — of live applications and has recently received support and trust by India's giant <a href=\"https://sharechat.com/\">ShareChat</a>, a social mobile app with over 100 million downloads, in which CameraView does a critical job."
+        "This tool likely powers thousands of live applications and has recently received support and trust by India's giant <a href=\"https://sharechat.com/\">ShareChat</a>, a social mobile app with over 100 million downloads, in which CameraView does a critical job."
       ]
     },
     "media": {
@@ -70,7 +70,7 @@
     "links": "Links",
     "subtitle": [
       "I am a 28-years old professional developer specialized in mobile applications and tools. I have been working as an Android engineer for many years, during which I have developed recognition in my field, especially within the Open Source community.",
-      "The tools I develop are used by tens of millions of end users every day. I am the author and maintainer of several popular projects in the Android community, most notably the <a href=\"https://natario1.github.io/CameraView\">CameraView</a> library. My experience and interests span many areas of development — from functional UI/UX to low-level graphics, device hardware and media.",
+      "The tools I develop are used by tens of millions of end users every day. I am the author and maintainer of several popular projects in the Android community, most notably the <a href=\"https://natario1.github.io/CameraView\">CameraView</a> library. My experience and interests span many areas of development — from functional UI/UX to low-level graphics, device hardware and media processing.",
       "This website is meant to showcase some of my work. If you or your company need support, consulting, training, PoCs or help in the development of new features, feel free to <a href=\"#contact\">get in touch</a>!"
     ]
   }

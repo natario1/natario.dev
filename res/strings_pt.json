@@ -1,0 +1,77 @@
+﻿{
+  "skills": {
+    "camera": {
+      "name": "Câmera",
+      "href": "#camera",
+      "description": [
+        "Lidar com hardware de dispositivos celulares não é fácil, e o sensor da câmera é uma das tarefas mais frustrantes. Isso é por causa da sua complexidade interna, mas também por causa do design desconfortável das API do SDK Android e as diferenças entre os fabricantes, tanto nos sensores quanto nos dispositivos.",
+        "Meu projeto, <a href=\"https://natario1.github.io/CameraView\">CameraView</a>, surgiu a partir dessa frustração e atraiu interesse com o passar dos anos, até se tornar uma das interfaces de câmera mais populares entre os programadores de Android. Além de se comunicar corretamente com o sensor da câmera, a biblioteca também inclui auxílio para recursos essenciais como filtros OpenGL em tempo real, marcas d'água, sobreposições e um processamento em tempo real eficiente.",
+        "Essa ferramenta alimenta centenas — se não, milhares — de aplicações ativas, e recentemente recebeu apoio de <a href=\"https://sharechat.com/\">ShareChat</a>, um aplicativo de rede social da Índia com mais de 100 milhões de downloads, no qual o CameraView faz um trabalho essencial."
+      ]
+    },
+    "media": {
+      "name": "Áudio & Vídeo",
+      "href": "#media",
+      "description": [
+        "Processar arquivos de mídia é uma tarefa pesada. Seja processamento de vídeos, cortes, transcodificação ou aplicação de filtros — sempre que há performance envolvida, é extremamente importante executar essas tarefas em um modelo acelerado por hardware, para completá-las em um tempo razoável.",
+        "Nos dispositivos Android, esse objetivo é alcançado trabalhando com as APIs do <code>MediaCodec</code> e administrando os buffers de dados brutos, usando OpenGL ES se necessário. Eu sou o autor e mantenedor de ferramentas Open Source para ajudar nesse processo. Na minha biblioteca <a href=\"https://natario1.github.io/Transcoder\">Transcoder</a>, por exemplo, é possível decodificar arquivos de vídeo e juntá-los novamente com várias opções avançadas. Ela pode ser modificada facilmente para que suporte filtros de vídeos ou efeitos de processamento de vozes.",
+        "Assim como o <a href=\"#camera\">CameraView</a>, essa ferramenta já recebeu apoio empresarial e é atualmente utilizada no <a href=\"https://sharechat.com/\">ShareChat</a>, um aplicativo de rede social com 10 milhões de usuários ativos diariamente. Recentemente, utilizei os mesmo princípios para arquivos de GIF e liberei <a href=\"https://natario1.github.io/GIFCompressor\">GIFCompressor</a>, um conversor de GIF-to-MP4 acelerado por hardware."
+      ]
+    },
+    "opengl": {
+      "name": "OpenGL",
+      "href": "#opengl",
+      "description": [
+        "Meus trabalhos de <a href=\"#camera\">câmera</a> e <a href=\"#media\">processamento de mídia</a> me levaram a melhorar minhas habilidades com o EGL e o OpenGL ES, que são fundamentais para manejar a pré-visualização da câmera, o processamento de frames da câmera, a edição de vídeos e a aplicação de efeitos em tempo real.",
+        "Estou longe de ser um especialista em OpenGL, mas sei como utilizá-los para as tarefas mencionadas acima e isso pode aprimorar grandemente a performance do aplicativo em relação à outras soluções. Eles também oferecem uma ótima flexibilidade que pode ser usada de maneira criativa. Por interesse nisso, desenvolvi o <a href=\"https://natario1.github.io/Egloo\">Egloo</a> — uma abstração em Kotlin ao redor do GLES que ajuda no manejo do contexto EGL e no desempenho de operações gráficas simples, usando componentes orientados a objetos que são familiares para qualquer programador de Android.",
+        "Egloo ainda está em desenvolvimento, mas o objetivo geral é fazer tarefas simples serem <em>simplificadas</em> da perspectiva do programador de Android, reduzindo, assim, a curva íngreme de aprendizado do OpenGL. Essa ferramenta alimenta todas as outras que já foram mencionadas acima, então, também é usada por milhões de usuários finais."
+      ]
+    },
+    "ui": {
+      "name": "UI / UX",
+      "href": "#ui",
+      "description": [
+        "O design de interfaces e da experiência do usuário é um campo fascinante que eu tenho interesse desde o começo da minha carreira. Tenho experiência na construção de componentes da UI que são bonitos e funcionais, e gosto do processo de projetá-los e refiná-los para promover a experiência certa para o usuário final.",
+        "Para alcançar isso no Android, é preciso ter conhecimento do sistema <code>View</code> e dos detalhes internos do SDK Android, incluindo animações signitificativas, gestão dos touch events, otimização das fases de medidas e layout de cada componente.",
+        "<a href=\"https://natario1.github.io/ZoomLayout\">ZoomLayout</a> e <a href=\"https://github.com/natario1/Elements\">Elements</a> são apenas alguns exemplos do meu trabalho Open Source nessa área. O anterior é uma abstração flexível que analisa os fluxos de toques na tela para fornecer zoom e pan bidimensionais para qualquer tipos de View (como <code>ViewGroup</code>, <code>ImageView</code>, ou fluxos de <code>Surface</code>). O último é uma coleção de componentes reutilizáveis, coordenados e modulares para <code>RecyclerView</code>. Os dois são escritos em Kotlin."
+      ]
+    },
+    "apps": {
+      "name": "Apps",
+      "href": "#apps",
+      "description": [
+        "Tenho trabalhado com produtos front-end por muitos anos, tanto para aplicativos comerciais quanto para projetos pessoais. Aprecio o design gráfico e escrevo código limpo, fácil de testar e reutilizar. Tenho conhecimento de todo o processo de construção de um aplicativo, da etapa da prova de conceito até o desenvolvimento, dimensionamento, testagem e liberação na app store.",
+        "O aplicativo <a href=\"https://picme.chat\">PicMe</a>, atualmente na fase beta, é um bom exemplo do meu trabalho front-end na área da interface de usuário, UX, design gráfico e engenharia. É um projeto pessoal que desenvolvo no meu tempo livre e sou a única pessoa por trás do website, gráficos, conceito, e base de códigos escrita em Kotlin."
+      ]
+    }
+  },
+  "extras": {
+    "github": {
+      "name": "GitHub",
+      "href": "https://github.com/natario1"
+    },
+    "contact": {
+      "name": "Entre em contato",
+      "href": "#contact",
+      "services_header": "Sinta-se à vontade para entrar em contato comigo para falar sobre o seu produto. Eu posso ajudar com:",
+      "services_footer": "Me envie um <a href=\"mailto:mat.iavarone@gmail.com\">e-mail</a>!",
+      "services": [
+        "fornecer auxílio sobre as ferramentas que eu desenvolvi;",
+        "criar novos recursos exclusivos em cima delas;",
+        "criar provas de conceito (PoC) para apps ou novos recursos;",
+        "consultoria geral dentro das minhas áreas de especialidades;",
+        "liderar e treinar equipes no desenvolvimento de novos recursos;",
+        "revisar o estado do seu produto / app / SDK;",
+        "projetar a pilha tecnológica de pequenas e grandes aplicações."
+      ]
+    }
+  },
+  "common": {
+    "links": "Links",
+    "subtitle": [
+      " Sou um programador profissional de 28 anos especializado em aplicativos e ferramentas de desenvolvimento para celulares. Tenho trabalhado como engenheiro de Android por muitos anos, nos quais conquistei reconhecimento na minha área de atuação, especialmente na comunidade Open Source.",
+      " As ferramentas que desenvolvo são usadas por dezenas de milhões de usuários finais todos os dias. Sou autor e mantenedor de diversos projetos conhecidos na comunidade Android, especialmente a biblioteca do <a href=\"https://natario1.github.io/CameraView\">CameraView</a>. Meus interesses se ampliam para muitas áreas de desenvolvimento - de interface de usuário até computação gráfica low-level, hardware e processamento de mídia.",
+      " Esse site apresenta alguns dos meus trabalhos. Se você ou a sua empresa precisarem de auxílio, consultoria, treinamento, PoCs ou ajuda em desenvolver novas ferramentas, sinta-se à vontade para <a href=\"#contact\">entrar em contato</a>!"
+    ]
+  }
+}
