@@ -30,7 +30,7 @@
 }
 
 .link-container img {
-  border-radius: 16px;
+  border-radius: 8px;
   filter: brightness(70%);
   width: 100%;
   /* To support a max-height, we must add the object- params */
